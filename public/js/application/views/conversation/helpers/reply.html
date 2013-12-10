@@ -1,0 +1,15 @@
+<div class="subject">
+	<input id="subjme" type="text" name="subject" placeholder="Voeg een onderwerp toe" value="RE: <%= subject %>" />
+	<div class="actions">
+		<a id="closeme" href="#"><i class="icon-remove" /></a>
+	</div>
+</div>
+<div class="headers">
+	<span class="newto"><%= from[0].address %></span>
+</div>
+<div class="body nopad">
+	<textarea id="editme"><br /><br /><%= text %></textarea>
+</div>
+<div class="buttonbar">
+	<a id="sendme" href="#"><i class="icon-envelope" /> SEND</a>
+</div>

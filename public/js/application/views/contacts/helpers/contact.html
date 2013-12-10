@@ -1,0 +1,15 @@
+<%
+	if (type == 'single') { %>
+		<i class="icon-user"/>
+<% } else { %>
+		<i class="icon-group"/>
+<% } %>
+
+<span><%= name %></span>
+<span> <%
+	if (typeof mail === 'string') { %>
+		<%= mail %>
+	<% } else { %>
+		<%= mail.join(', ') %>
+	<% } %>
+</span>

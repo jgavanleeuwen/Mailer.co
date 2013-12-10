@@ -1,0 +1,32 @@
+<div class="subject">
+	<% if (_.contains(flags, '\\Flagged')) { %>
+		<i class="icon-star" />
+	<% } else { %>
+		<i class="icon-star-empty" />
+	<% } %>	
+	<span><%= subject %></span>
+	<div class="actions">
+		<a id="selectprev"><i class="icon-arrow-left" /></a>
+		<a id="selectnext"><i class="icon-arrow-right" /></a>
+		<a id="replyme"><i class="icon-reply" /></a>
+		<a id="trashme"><i class="icon-trash" /></a>
+		<a id="closeme" href="#"><i class="icon-remove" /></a>
+	</div>
+</div>
+<div class="headers">
+	<span class="from"><%= from[0].name %></span> <span>to</span> <span class="to">me</span>
+	<span class="labels">in <%= flags.join(', ').replace(/\\/g, '') %></span>
+	<span class="date"><%= headers.date %></span>
+	<span class="attached"><i class="icon-paper-clip" /> (<%= attachments.length %>)</span>
+</div>
+<div class="body nopad">
+	<iframe id="sandbox" width="100%" height="100%" style="border:none"></iframe>
+</div>
+<div class="attachments">
+	<strong>Attachments</strong><span>(<%= attachments.length %> files)</span>
+	<ul class="attachments"></ul>
+</div>
+<div class="buttonbar">
+	<!--<a id="replyme"><i class="icon-reply" /> REPLY</a>-->
+</div>
+

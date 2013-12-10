@@ -1,0 +1,10 @@
+<a href="<%= id %>" class="<%= flags.join(' ').replace(/\\/g, '').toLowerCase() %>">
+	<dl>
+		<dt><i class="icon-check-empty" /> <%= from[0].name %></dt>
+		<dd><i class="icon-star" /><%= subject[0].substring(0, 30) %></dd>
+	</dl>
+	<span class="date"><%= new Date(date).getDate() + '-' + new Date(date).getMonth() %></span>
+	<% if( _.intersection( ['\Friends', '\Jobs', '\Sports'], flags ).length) { %>
+		<i class="icon-tag" />
+	<% } %>
+</a>
